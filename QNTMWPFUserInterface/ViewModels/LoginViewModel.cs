@@ -12,6 +12,7 @@ namespace QNTMWPFUserInterface.ViewModels
     {
         private string _userName;
         private string _password;
+        private string _errorMessage;
         private IAPIHelper _apiHelper;
 
         public LoginViewModel(IAPIHelper apiHelper)
@@ -41,6 +42,32 @@ namespace QNTMWPFUserInterface.ViewModels
             }
         }
 
+        public bool IsErrorVisible
+        {
+            get
+            {
+                bool output = false;
+                if (ErrorMessage?.Length > 0)
+                {
+                    output = true;
+                }
+                return output;
+            }
+        }
+
+
+        public string ErrorMessage
+        {
+            get { return _errorMessage; }
+            set
+            {
+                _errorMessage = value;
+                NotifyOfPropertyChange(() => IsErrorVisible);
+                NotifyOfPropertyChange(() => ErrorMessage);
+            }
+        }
+
+
         public bool CanLogIn
         {
             get
@@ -60,11 +87,12 @@ namespace QNTMWPFUserInterface.ViewModels
         {
             try
             {
+                ErrorMessage = "";
                 var user = await _apiHelper.Login(UserName, Password);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                ErrorMessage = ex.Message;
             }
            
         }
