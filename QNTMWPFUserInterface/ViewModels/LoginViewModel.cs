@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using QNTMWPFUserInterface.EventModels;
 using QNTMWPFUserInterface.Library.Helpers;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace QNTMWPFUserInterface.ViewModels
         private string _password;
         private string _errorMessage;
         private IAPIHelper _apiHelper;
+        private IEventAggregator _events;
 
-        public LoginViewModel(IAPIHelper apiHelper)
+        public LoginViewModel(IAPIHelper apiHelper, IEventAggregator events)
         {
             _apiHelper = apiHelper;
+            _events = events;
         }
 
         public string UserName
@@ -89,6 +92,8 @@ namespace QNTMWPFUserInterface.ViewModels
             {
                 ErrorMessage = "";
                 var user = await _apiHelper.Login(UserName, Password);
+
+                _events.PublishOnUIThread(new LogOnEventModel());
             }
             catch (Exception ex)
             {
