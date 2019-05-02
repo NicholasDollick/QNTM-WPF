@@ -9,9 +9,9 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QNTMWPFUserInterface.Helpers
+namespace QNTMWPFUserInterface.Library.Helpers
 {
-    public class APIHelper : IAPIHelper
+    public class APIHelper : IAPIHelper 
     {
         private HttpClient ApiClient { get; set; }
 

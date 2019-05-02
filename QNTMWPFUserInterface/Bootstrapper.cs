@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using QNTMWPFUserInterface.Helpers;
+using QNTMWPFUserInterface.Library.Helpers;
 using QNTMWPFUserInterface.ViewModels;
 using System;
 using System.Collections.Generic;

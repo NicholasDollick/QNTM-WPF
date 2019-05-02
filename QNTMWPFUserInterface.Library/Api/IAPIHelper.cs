@@ -1,7 +1,7 @@
 ﻿using QNTMWPFUserInterface.Models;
 using System.Threading.Tasks;
 
-namespace QNTMWPFUserInterface.Helpers
+namespace QNTMWPFUserInterface.Library.Helpers
 {
     public interface IAPIHelper
     {

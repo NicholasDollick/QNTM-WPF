@@ -1,5 +1,5 @@
 ﻿using Caliburn.Micro;
-using QNTMWPFUserInterface.Helpers;
+using QNTMWPFUserInterface.Library.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
