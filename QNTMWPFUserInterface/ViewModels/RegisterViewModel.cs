@@ -106,7 +106,11 @@ namespace QNTMWPFUserInterface.ViewModels
             {
                 ErrorMessage = ex.Message;
             }
+        }
 
+        public void Cancel()
+        {
+            _events.PublishOnUIThread(new ReturnHomeEventModel());
         }
     }
 }

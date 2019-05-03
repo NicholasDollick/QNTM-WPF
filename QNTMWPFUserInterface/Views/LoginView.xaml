@@ -36,10 +36,17 @@
                      Background="Transparent" SelectionBrush="Black"/>
 
             <!-- CONTROLS -->
-            <Button HorizontalAlignment="Center"
-                x:Name="LogIn" Padding="50 5" Margin="0 30 0 0" Background="#FFC5FF00">
-                Sign In
-            </Button>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button HorizontalAlignment="Center"
+                x:Name="LogIn" Padding="50 5" Margin="0 10 0 20" Background="#FFC5FF00">
+                    Sign In
+                </Button>
+
+                <Button HorizontalAlignment="Center" 
+                    x:Name="Cancel" Padding="50 5" Margin="10 10 10 20" Background="#FFC5FF00">
+                    Cancel
+                </Button>
+            </StackPanel>
         </StackPanel>
     </Border>
 </UserControl>

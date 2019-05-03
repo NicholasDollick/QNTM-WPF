@@ -8,7 +8,7 @@ using QNTMWPFUserInterface.EventModels;
 
 namespace QNTMWPFUserInterface.ViewModels
 {
-    public class ShellViewModel : Conductor<object>, IHandle<LogOnEventModel>, IHandle<GoToRegisterEventModel>, IHandle<GoToLoginEventModel>
+    public class ShellViewModel : Conductor<object>, IHandle<LogOnEventModel>, IHandle<GoToRegisterEventModel>, IHandle<GoToLoginEventModel>, IHandle<ReturnHomeEventModel>
     {
         private IEventAggregator _events;
         private SimpleContainer _container;
@@ -18,7 +18,6 @@ namespace QNTMWPFUserInterface.ViewModels
         {
             _events = events;
             _container = containter;
-
             _home = home;
 
             _events.Subscribe(this);
@@ -39,6 +38,11 @@ namespace QNTMWPFUserInterface.ViewModels
         public void Handle(GoToLoginEventModel message)
         {
             ActivateItem(_container.GetInstance<LoginViewModel>());
+        }
+
+        public void Handle(ReturnHomeEventModel message)
+        {
+            ActivateItem(_home);
         }
     }
 }

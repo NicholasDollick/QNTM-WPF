@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="667" d:DesignWidth="375">
     <Border Background="Gray" CornerRadius="20" Margin="0 120 0 120" Opacity="0.90">
-        <StackPanel Margin="20">
+        <StackPanel Margin="30,20,10,20">
             <Label Content="Create Account" Foreground="White" FontSize="22"
                    HorizontalAlignment="Center"/>
 
@@ -42,10 +42,17 @@
                      Background="Transparent" SelectionBrush="Black"/>
 
             <!-- CONTROLS -->
-            <Button HorizontalAlignment="Center"
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button HorizontalAlignment="Center"
                 x:Name="Register" Padding="50 5" Margin="0 10 0 20" Background="#FFC5FF00">
-                Submit
-            </Button>
+                    Submit
+                </Button>
+                
+                <Button HorizontalAlignment="Center" 
+                    x:Name="Cancel" Padding="50 5" Margin="10 10 10 20" Background="#FFC5FF00">
+                    Cancel
+                </Button>
+            </StackPanel>
         </StackPanel>
     </Border>
 </UserControl>
