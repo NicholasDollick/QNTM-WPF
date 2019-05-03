@@ -5,15 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:QNTMWPFUserInterface.Views"
              mc:Ignorable="d" Background="Gray"
-             d:DesignHeight="300" d:DesignWidth="500">
+             xmlns:behaviors="clr-namespace:QNTMWPFUserInterface.EventModels"
+             d:DesignHeight="667" d:DesignWidth="375">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
@@ -22,11 +25,16 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
+        <UserControl Grid.Row="1" Grid.Column="0" Grid.RowSpan="5" 
+                     Grid.ColumnSpan="5" Background="Red">
+            
+        </UserControl>
+
         <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"
-                   FontSize="30" FontFamily="Segoe UI Light" Margin="0 0 0 10">
-            Login Form
+                   FontSize="20" FontFamily="Segoe UI Light" Margin="0 200 0 10">
+            SIGN IN
         </TextBlock>
-        
+
         <!-- ERROR MSG-->
         <TextBlock x:Name="ErrorMessage" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" 
                    Margin="0 0 0 20" Foreground="Red" FontSize="18" MaxWidth="300"
@@ -38,18 +46,22 @@
         <TextBlock Grid.Row="2" Grid.Column="1" Margin="0 0 0 10">
             Username:
         </TextBlock>
-        <TextBox x:Name="UserName" Grid.Row="2" Grid.Column="2" MinWidth="200" Margin="5 0 0 20"/>
+        <TextBox x:Name="UserName" Grid.Row="2" Grid.Column="2" MinWidth="200" Margin="5 0 0 20"
+                 BorderThickness="0 0 0 1" BorderBrush="Black" Background="Transparent" 
+                 SelectionBrush="Black"/>
+
 
         <!-- PASSWORD -->
         <TextBlock Grid.Row="3" Grid.Column="1" Margin="0 0 0 10">
             Password:
         </TextBlock>
-        <PasswordBox x:Name="Password" Grid.Row="3" Grid.Column="2" MinWidth="150" Margin="5 0 0 10"/>
+        <PasswordBox x:Name="Password" Grid.Row="3" Grid.Column="2" MinWidth="150" Margin="5 0 0 10"
+                     BorderThickness="0 0 0 1" BorderBrush="Black" Background="Transparent" SelectionBrush="Black"/>
 
         <!-- CONTROLS -->
         <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"
-                x:Name="LogIn" Padding="20 5">
-            Login
+                x:Name="LogIn" Padding="50 5">
+            Sign In
         </Button>
     </Grid>
 </UserControl>

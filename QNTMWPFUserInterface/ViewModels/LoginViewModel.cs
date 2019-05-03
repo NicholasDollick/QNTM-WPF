@@ -14,6 +14,7 @@ namespace QNTMWPFUserInterface.ViewModels
         private string _userName;
         private string _password;
         private string _errorMessage;
+        private string _textTest = "hello world";
         private IAPIHelper _apiHelper;
         private IEventAggregator _events;
 
@@ -70,6 +71,16 @@ namespace QNTMWPFUserInterface.ViewModels
             }
         }
 
+        public string TextTest
+        {
+            get { return _textTest; }
+            set
+            {
+                _textTest = "";
+                NotifyOfPropertyChange(() => TextTest);
+            }
+        }
+
 
         public bool CanLogIn
         {
@@ -77,7 +88,7 @@ namespace QNTMWPFUserInterface.ViewModels
             {
                 bool output = false;
 
-                if (UserName?.Length > 0 && Password?.Length > 0)
+                if (UserName?.Length > 0 && Password?.Length > 6)
                 {
                     output = true;
                 }
