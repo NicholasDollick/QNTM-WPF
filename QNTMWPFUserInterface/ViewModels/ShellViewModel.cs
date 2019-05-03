@@ -20,7 +20,7 @@ namespace QNTMWPFUserInterface.ViewModels
 
             _events.Subscribe(this);
 
-            ActivateItem(_container.GetInstance<LoginViewModel>());
+            ActivateItem(_container.GetInstance<RegisterViewModel>());
         }
 
         public void Handle(LogOnEventModel message)

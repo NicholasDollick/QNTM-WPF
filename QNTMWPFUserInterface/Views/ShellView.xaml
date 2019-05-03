@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QNTMWPFUserInterface.Views"
         mc:Ignorable="d"
-        Title="ShellView" Height="667" Width="375">
+        Title="ShellView" Height="700" Width="375">
     <DockPanel>
         <Menu DockPanel.Dock="Top" FontSize="12">
             <MenuItem Header="_File">
@@ -16,6 +16,9 @@
             </MenuItem>
         </Menu>
         <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/QNTM;component/images/2.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
             <ContentControl x:Name="ActiveItem" Margin="20 5 20 20" />
         </Grid>
     </DockPanel>

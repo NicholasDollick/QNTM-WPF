@@ -5,8 +5,47 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:QNTMWPFUserInterface.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+             d:DesignHeight="667" d:DesignWidth="375">
+    <Border Background="Gray" CornerRadius="20" Margin="0 120 0 120" Opacity="0.90">
+        <StackPanel Margin="20">
+            <Label Content="Create Account" Foreground="White" FontSize="22"
+                   HorizontalAlignment="Center"/>
+
+            <Separator></Separator>
+
+            <!-- ERROR MSG-->
+            <TextBlock x:Name="ErrorMessage"
+                   Margin="0 0 0 20" Foreground="Red" FontSize="16" MaxWidth="300"
+                   TextWrapping="Wrap" 
+                   Visibility="{Binding IsErrorVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}" 
+                   />
+            <TextBlock Margin="0 0 0 10">
+            Username:
+            </TextBlock>
+            <TextBox x:Name="UserName" MinWidth="200" Margin="5 0 0 20"
+                 BorderThickness="0 0 0 1" BorderBrush="Black" Background="Transparent" 
+                 SelectionBrush="Black"/>
+
+            <!-- PASSWORD -->
+            <TextBlock Margin="0 0 0 10">
+            Password:
+            </TextBlock>
+            <PasswordBox x:Name="Password" MinWidth="150" Margin="5 0 0 10"
+                     BorderThickness="0 0 0 1" BorderBrush="Black" 
+                     Background="Transparent" SelectionBrush="Black"/>
             
-    </Grid>
+            <TextBlock Margin="0 0 0 10">
+            Confirm Password:
+            </TextBlock>
+            <PasswordBox x:Name="PasswordConfirm" MinWidth="150" Margin="5 0 0 10"
+                     BorderThickness="0 0 0 1" BorderBrush="Black" 
+                     Background="Transparent" SelectionBrush="Black"/>
+
+            <!-- CONTROLS -->
+            <Button HorizontalAlignment="Center"
+                x:Name="Register" Padding="50 5" Margin="0 10 0 20" Background="#FFC5FF00">
+                Submit
+            </Button>
+        </StackPanel>
+    </Border>
 </UserControl>
