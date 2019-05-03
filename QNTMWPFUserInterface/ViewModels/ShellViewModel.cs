@@ -12,15 +12,20 @@ namespace QNTMWPFUserInterface.ViewModels
     {
         private IEventAggregator _events;
         private SimpleContainer _container;
+        private SplashViewModel _home;
 
-        public ShellViewModel(IEventAggregator events, SimpleContainer containter)
+        public ShellViewModel(IEventAggregator events, SimpleContainer containter, SplashViewModel home)
         {
             _events = events;
             _container = containter;
 
+            _home = home;
+
             _events.Subscribe(this);
 
-            ActivateItem(_container.GetInstance<RegisterViewModel>());
+            ActivateItem(_home);
+
+            // ActivateItem(_container.GetInstance<RegisterViewModel>());
         }
 
         public void Handle(LogOnEventModel message)

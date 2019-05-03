@@ -5,8 +5,48 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:QNTMWPFUserInterface.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="667" d:DesignWidth="375">
+
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="/QNTM;component/images/dropshadow-and-text.png" Stretch="Fill"
+                   MaxHeight="220" MaxWidth="223">
+                <Image.Effect>
+                    <DropShadowEffect/>
+                </Image.Effect>
+            </Image>
+        </StackPanel>
+        <Border Grid.Row="2" Grid.Column="0" Background="Black" 
+                Padding="100" Grid.ColumnSpan="3" Grid.RowSpan="2"
+                Margin="0 -60 0 0" Opacity=".4">
+            <Border.Effect>
+                <BlurEffect Radius="34"/>
+            </Border.Effect>
+        </Border>
+        <StackPanel Grid.Row="2"  Grid.Column="1" Orientation="Vertical" 
+                    HorizontalAlignment="Center">
+            <Button Margin="0 0 0 0" x:Name="RegisterButton" Padding="60 8" 
+                    Background="#FFFF7400" Foreground="White"
+                    BorderThickness="0">
+                Create Account
+            </Button>
+            <Button Margin="0 10 0 0" x:Name="LoginButton" Padding="60 8" 
+                    Background="#FFFF7400" Foreground="White"
+                    BorderThickness="0">
+                Sign In
+            </Button>
+        </StackPanel>
     </Grid>
 </UserControl>
