@@ -8,7 +8,7 @@ using QNTMWPFUserInterface.EventModels;
 
 namespace QNTMWPFUserInterface.ViewModels
 {
-    public class ShellViewModel : Conductor<object>, IHandle<LogOnEventModel>
+    public class ShellViewModel : Conductor<object>, IHandle<LogOnEventModel>, IHandle<GoToRegisterEventModel>, IHandle<GoToLoginEventModel>
     {
         private IEventAggregator _events;
         private SimpleContainer _container;
@@ -24,14 +24,21 @@ namespace QNTMWPFUserInterface.ViewModels
             _events.Subscribe(this);
 
             ActivateItem(_home);
-
-            // ActivateItem(_container.GetInstance<RegisterViewModel>());
         }
 
         public void Handle(LogOnEventModel message)
         {
             throw new NotImplementedException();
-            // ActivateItem(other view here);
+        }
+
+        public void Handle(GoToRegisterEventModel message)
+        {
+            ActivateItem(_container.GetInstance<RegisterViewModel>());
+        }
+
+        public void Handle(GoToLoginEventModel message)
+        {
+            ActivateItem(_container.GetInstance<LoginViewModel>());
         }
     }
 }

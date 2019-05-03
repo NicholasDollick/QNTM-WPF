@@ -2,7 +2,7 @@
 
 namespace QNTMWPFUserInterface.EventModels
 {
-    public class LogOnEventModel
+    public class GoToRegisterEventModel
     {
     }
 }
