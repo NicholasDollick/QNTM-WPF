@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
 using QNTMWPFUserInterface.EventModels;
+using System.Windows;
 
 namespace QNTMWPFUserInterface.ViewModels
 {
@@ -27,7 +28,7 @@ namespace QNTMWPFUserInterface.ViewModels
 
         public void Handle(LogOnEventModel message)
         {
-            throw new NotImplementedException();
+            MessageBox.Show("This WOuld be a login");
         }
 
         public void Handle(GoToRegisterEventModel message)

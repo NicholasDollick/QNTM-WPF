@@ -8,7 +8,7 @@
              xmlns:behaviors="clr-namespace:QNTMWPFUserInterface.EventModels"
              d:DesignHeight="667" d:DesignWidth="375">
     <Border Background="Gray" CornerRadius="20" Margin="0 100 0 150" Opacity="0.90">
-        <StackPanel Margin="20">
+        <StackPanel Margin="30, 20, 30, 20">
             <Label Content="Sign In" Foreground="White" FontSize="25"
                    HorizontalAlignment="Center"/>
 

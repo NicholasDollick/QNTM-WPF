@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="667" d:DesignWidth="375">
     <Border Background="Gray" CornerRadius="20" Margin="0 120 0 120" Opacity="0.90">
-        <StackPanel Margin="30,20,10,20">
+        <StackPanel Margin="30,20,30,20">
             <Label Content="Create Account" Foreground="White" FontSize="22"
                    HorizontalAlignment="Center"/>
 
