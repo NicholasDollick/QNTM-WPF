@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -38,7 +39,7 @@ namespace QNTMWPFUserInterface.Library.Helpers
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    // do a popup or something lol
+                    // do something?
                 }
                 else
                 {
@@ -56,8 +57,6 @@ namespace QNTMWPFUserInterface.Library.Helpers
                 if (response.IsSuccessStatusCode)
                 {
                     var result = await response.Content.ReadAsAsync<AuthenticatedUser>();
-                    Console.WriteLine(result.Token);
-                    Console.WriteLine(result.UserName);
                     return result;
                 }
                 else

@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace QNTMWPFUserInterface.ViewModels
 {
-    public class ShellViewModel : Conductor<object>, IHandle<LogOnEventModel>, IHandle<GoToRegisterEventModel>, IHandle<GoToLoginEventModel>, IHandle<ReturnHomeEventModel>
+    public class ShellViewModel : Conductor<object>, IHandle<LogOnEventModel>, IHandle<GoToRegisterEventModel>, IHandle<GoToLoginEventModel>, IHandle<ReturnHomeEventModel>, IHandle<RegisterEventModel>
     {
         private IEventAggregator _events;
         private SimpleContainer _container;
@@ -44,6 +44,11 @@ namespace QNTMWPFUserInterface.ViewModels
         public void Handle(ReturnHomeEventModel message)
         {
             ActivateItem(_home);
+        }
+
+        public void Handle(RegisterEventModel message)
+        {
+            ActivateItem(_container.GetInstance<LoginViewModel>());
         }
     }
 }
