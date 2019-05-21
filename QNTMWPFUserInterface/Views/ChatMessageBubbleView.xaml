@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="QNTMWPFUserInterface.Views.ChatMessageBubbleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QNTMWPFUserInterface.Views"
+             mc:Ignorable="d" d:DesignWidth="300">
+    <!-- This assumes dark mode for now -->
+    <Border Padding="5px" Background="Black">
+        <Grid>
+            <!-- Message Container -->
+            <Grid Margin="10 15 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <!-- Text Bubble -->
+                <Border CornerRadius="10" Background="Gray" Opacity="1000" Padding="15">
+                    <!-- Message -->
+                    <TextBlock VerticalAlignment="Center"
+                           Foreground="White"
+                           TextWrapping="Wrap"
+                           Text="This is where the text of the messages is going even if its long"
+                           />
+                </Border>
+    <!--
+                <Path Grid.Row="1" Margin="15 0 15 0"
+                      Data="M 0,0 L 15,15 L 30,0 L 0,0"
+                      Fill="Gray"
+                      />
+     -->
+            </Grid>
+            <!-- Profile icon thingy -->
+            <Border VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    CornerRadius="20"
+                    Height="30"
+                    Width="30"
+                    Background="DarkCyan"
+                    BorderThickness="2"
+                    BorderBrush="White"
+                    >
+                <!-- Text will be bound to first letter of username -->
+                <TextBlock Text="N"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           FontSize="18"/>
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>
