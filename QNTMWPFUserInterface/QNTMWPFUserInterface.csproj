@@ -88,6 +88,10 @@
     <Compile Include="EventModels\RegisterEvent.cs" />
     <Compile Include="EventModels\ReturnHomeEvent.cs" />
     <Compile Include="Helpers\PasswordBoxHelper.cs" />
+    <Compile Include="Models\ChatListDesignModel.cs" />
+    <Compile Include="Models\DesignModel.cs" />
+    <Compile Include="ViewModels\ChatListControlViewModel.cs" />
+    <Compile Include="ViewModels\ChatListItemViewModel.cs" />
     <Compile Include="ViewModels\ChatMessageBubbleViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainChatViewModel.cs" />
@@ -95,6 +99,12 @@
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\SideMenuControlViewModel.cs" />
     <Compile Include="ViewModels\SplashViewModel.cs" />
+    <Compile Include="Views\ChatListControlView.xaml.cs">
+      <DependentUpon>ChatListControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChatListItemView.xaml.cs">
+      <DependentUpon>ChatListItemView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ChatMessageBubbleView.xaml.cs">
       <DependentUpon>ChatMessageBubbleView.xaml</DependentUpon>
     </Compile>
@@ -120,6 +130,14 @@
     <Compile Include="Views\SplashView.xaml.cs">
       <DependentUpon>SplashView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\ChatListControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ChatListItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ChatMessageBubbleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -183,9 +201,7 @@
       <Name>QNTMWPFUserInterface.Library</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="images\2.jpg" />
   </ItemGroup>
