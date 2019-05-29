@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="QNTMWPFUserInterface.Views.ChatListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QNTMWPFUserInterface.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="300">
+    <Grid Background="Gray">
+        <Grid.ColumnDefinitions>
+            <!-- Chat Alerts -->
+            <ColumnDefinition Width="auto"/>
+            <!-- Icon -->
+            <ColumnDefinition Width="auto"/>
+            <!-- Content -->
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- New Message Indicator -->
+        <Border Background="Orange" Width="5"/>
+
+        <!-- Icon Padding -->
+        <Border Grid.Column="1" Padding="8">
+            <!-- Icon -->
+            <Border Background="Black"
+                    Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}"
+                    CornerRadius="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}">
+                <!-- Text will be bound to first letter of username -->
+                <TextBlock Text="U"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           FontSize="30"/>
+            </Border>
+        </Border>
+        
+        
+        <!-- Main Content -->
+        <StackPanel Grid.Column="2" VerticalAlignment="Center">
+            <TextBlock Text="Username" 
+                       Foreground="White"
+                       FontWeight="Bold"
+                       />
+            <TextBlock Text="This is a test message yo! Lets make this longer too!" 
+                       Foreground="White"
+                       TextWrapping="Wrap"
+                       FontSize="11"
+                       />
+        </StackPanel>
+
+    </Grid>
+</UserControl>

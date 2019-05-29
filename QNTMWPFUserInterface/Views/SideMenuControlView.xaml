@@ -29,9 +29,8 @@
                         <StackPanel Orientation="Horizontal">
                             <Border VerticalAlignment="Top"
                                     HorizontalAlignment="Left"
-                                    CornerRadius="20"
-                                    Height="30"
-                                    Width="30"
+                                    CornerRadius="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}"
+                                    Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}"
                                     Background="DarkCyan"
                                     BorderThickness="2"
                                     BorderBrush="White"
