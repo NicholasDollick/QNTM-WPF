@@ -4,12 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:QNTMWPFUserInterface.Views"
+             xmlns:model="clr-namespace:QNTMWPFUserInterface.Models"
+             xmlns:helpers="clr-namespace:QNTMWPFUserInterface.Helpers"
              mc:Ignorable="d" d:DesignWidth="300">
     <!-- This assumes dark mode for now -->
-    <Border Padding="5px" Background="Black">
+    <!--DataContext="{x:Static model:SingleChatMessageDesignModel.Instance}"-->
+    <Border Padding="5px">
         <Grid>
             <!-- Message Container -->
-            <Grid Margin="10 15 0 0">
+            <Grid Margin="10 15 0 0"
+                  HorizontalAlignment="{Binding SentByMe, Converter={helpers:SentByMeToAllignmentConverter}}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="auto"/>
@@ -21,7 +25,7 @@
                     <TextBlock VerticalAlignment="Center"
                            Foreground="White"
                            TextWrapping="Wrap"
-                           Text="This is where the text is going"
+                           Text="{Binding Message}"
                            />
                 </Border>
     <!--
@@ -34,6 +38,7 @@
             <!-- Profile icon thingy -->
             <Border VerticalAlignment="Top"
                     HorizontalAlignment="Left"
+                    Visibility="{Binding SentByMe, Converter={helpers:InvertedBooleanConverter}, ConverterParameter=true}"
                     CornerRadius="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}"
                     Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}"
                     Background="DarkCyan"
@@ -41,7 +46,7 @@
                     BorderBrush="White"
                     >
                 <!-- Text will be bound to first letter of username -->
-                <TextBlock Text="N"
+                <TextBlock Text="{Binding Initial}"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            Foreground="White"

@@ -7,8 +7,8 @@
              xmlns:model="clr-namespace:QNTMWPFUserInterface.Models"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid DataContext="{x:Static model:ChatListDesignModel.Instance}"
-          Background="White">
+    <Grid DataContext="{x:Static model:ChatMessageDesignModel.Instance}"
+          Background="Black">
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <ItemsControl ItemsSource="{Binding Items}">
                 <ItemsControl.ItemTemplate>

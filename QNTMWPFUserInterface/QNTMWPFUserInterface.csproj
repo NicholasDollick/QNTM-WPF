@@ -87,12 +87,18 @@
     <Compile Include="EventModels\ClearOnFocus.cs" />
     <Compile Include="EventModels\RegisterEvent.cs" />
     <Compile Include="EventModels\ReturnHomeEvent.cs" />
+    <Compile Include="Helpers\BaseValueConverter.cs" />
+    <Compile Include="Helpers\InvertedBooleanConverter.cs" />
     <Compile Include="Helpers\PasswordBoxHelper.cs" />
+    <Compile Include="Helpers\SentByMeToAllignmentConverter.cs" />
     <Compile Include="Models\ChatListDesignModel.cs" />
+    <Compile Include="Models\SingleChatMessageDesignModel.cs" />
+    <Compile Include="Models\ChatMessageDesignModel.cs" />
     <Compile Include="Models\DesignModel.cs" />
     <Compile Include="ViewModels\ChatListControlViewModel.cs" />
     <Compile Include="ViewModels\ChatListItemViewModel.cs" />
     <Compile Include="ViewModels\ChatMessageBubbleViewModel.cs" />
+    <Compile Include="ViewModels\ChatMessageListViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainChatViewModel.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
@@ -215,7 +221,9 @@
       <Name>QNTMWPFUserInterface.Library</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\icon.ico" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="images\2.jpg" />
   </ItemGroup>
