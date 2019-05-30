@@ -13,10 +13,14 @@
         </Grid.ColumnDefinitions>
         
         <!-- Side Menu -->
-        <local:SideMenuControlView>
+        <local:SideMenuControlView Grid.Column="0">
             <local:ChatListControlView>
-                
+
             </local:ChatListControlView>
         </local:SideMenuControlView>
+        
+        <local:ChatMessageListView Grid.Column="1">
+            
+        </local:ChatMessageListView>
     </Grid>
 </UserControl>

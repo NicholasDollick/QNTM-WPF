@@ -17,5 +17,8 @@ namespace QNTMWPFUserInterface.ViewModels
 
         // true when a new unread message is recieved
         public bool NewMessage { get; set; }
+
+        // true when chat is open
+        public bool IsActive { get; set; }
     }
 }

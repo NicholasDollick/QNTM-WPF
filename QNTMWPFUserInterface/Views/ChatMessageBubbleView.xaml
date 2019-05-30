@@ -21,7 +21,7 @@
                     <TextBlock VerticalAlignment="Center"
                            Foreground="White"
                            TextWrapping="Wrap"
-                           Text="This is where the text of the messages is going even if its long"
+                           Text="This is where the text is going"
                            />
                 </Border>
     <!--

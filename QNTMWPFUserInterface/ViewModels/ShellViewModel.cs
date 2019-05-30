@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Caliburn.Micro;
+﻿using Caliburn.Micro;
 using QNTMWPFUserInterface.EventModels;
-using System.Windows;
 
 namespace QNTMWPFUserInterface.ViewModels
 {
@@ -14,12 +8,14 @@ namespace QNTMWPFUserInterface.ViewModels
         private IEventAggregator _events;
         private SimpleContainer _container;
         private SplashViewModel _home;
+        private MainChatViewModel _chat;
 
-        public ShellViewModel(IEventAggregator events, SimpleContainer containter, SplashViewModel home)
+        public ShellViewModel(IEventAggregator events, SimpleContainer containter, SplashViewModel home, MainChatViewModel chat)
         {
             _events = events;
             _container = containter;
             _home = home;
+            _chat = chat;
 
             _events.Subscribe(this);
 
@@ -28,7 +24,7 @@ namespace QNTMWPFUserInterface.ViewModels
 
         public void Handle(LogOnEventModel message)
         {
-            MessageBox.Show("This WOuld be a login");
+            ActivateItem(_chat);
         }
 
         public void Handle(GoToRegisterEventModel message)

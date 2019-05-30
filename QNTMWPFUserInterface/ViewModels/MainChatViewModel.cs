@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QNTMWPFUserInterface.ViewModels
 {
-    class MainChatViewModel : Screen
+    public class MainChatViewModel : Screen
     {
     }
 }

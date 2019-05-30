@@ -108,6 +108,12 @@
     <Compile Include="Views\ChatMessageBubbleView.xaml.cs">
       <DependentUpon>ChatMessageBubbleView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ChatMessageListView.xaml.cs">
+      <DependentUpon>ChatMessageListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChatMesssageListItemView.xaml.cs">
+      <DependentUpon>ChatMesssageListItemView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
@@ -139,6 +145,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ChatMessageBubbleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ChatMessageListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ChatMesssageListItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
