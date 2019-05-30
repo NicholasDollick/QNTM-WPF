@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:QNTMWPFUserInterface.Views"
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="600">
-    <Grid Background="White">
+    <Grid Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="5*"/>

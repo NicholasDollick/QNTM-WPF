@@ -8,8 +8,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid DataContext="{x:Static model:ChatMessageDesignModel.Instance}"
-          Background="Black">
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
+           VerticalAlignment="Bottom">
+        <Grid.RowDefinitions>
+            <!-- chat text area -->
+            <RowDefinition Height="*" />
+            <!-- end user controls -->
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Display Chat in this area -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="0">
             <ItemsControl ItemsSource="{Binding Items}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
@@ -18,5 +26,43 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
+        
+        <!-- chatbox area -->
+        <Grid MinHeight="30" MaxHeight="110" Grid.Row="1" Background="Gray">
+            <Grid.ColumnDefinitions>
+                <!-- options(currently unused) -->
+                <ColumnDefinition Width="auto" />
+                <!-- text entry -->
+                <ColumnDefinition Width="*" />
+                <!-- extra -->
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="1" Margin="12 0 0 0"
+                     Tag="Write Message...." 
+                     Text="Write A Message..."
+                     FontSize="12"
+                     Foreground="Black" 
+                     BorderThickness="0"
+                     AcceptsReturn="True"
+                     AcceptsTab="True"
+                     VerticalAlignment="Center"
+                     Background="Gray"
+                     />
+
+            <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="0 0 8 0">
+                <!-- unicode emoji -->
+                <Button Height="{Binding Height, RelativeSource={RelativeSource AncestorType=Grid}}"
+                        Content="   :)   "/>
+
+                <!-- send button -->
+                <Button Content="Send"
+                        Padding="6"
+                        FontSize="12"
+                        />
+            </StackPanel>
+
+        </Grid>
+        
     </Grid>
 </UserControl>
