@@ -10,8 +10,6 @@
     <!-- Single: DataContext="{x:Static local:DesignModel.Instance}" -->
     <Grid Background="Gray">
         <Grid.ColumnDefinitions>
-            <!-- Chat Alerts -->
-            <ColumnDefinition Width="auto"/>
             <!-- Icon -->
             <ColumnDefinition Width="auto"/>
             <!-- Content -->
@@ -19,10 +17,14 @@
         </Grid.ColumnDefinitions>
 
         <!-- New Message Indicator -->
-        <Border Background="Orange" Width="5"/>
+        <Border Background="Orange" Width="4"
+                HorizontalAlignment="Left" 
+                Visibility="{Binding NewMessage, 
+                    Converter={StaticResource BooleanToVisibilityConverter}, 
+                    ConverterParameter=True}"/>
 
         <!-- Icon Padding -->
-        <Border Grid.Column="1" Padding="8">
+        <Border Grid.Column="0" Padding="8">
             <!-- Icon -->
             <Border Background="Black"
                     Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}"
@@ -40,7 +42,7 @@
         
         
         <!-- Main Content -->
-        <StackPanel Grid.Column="2" VerticalAlignment="Center">
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
             <TextBlock Text="{Binding Username}" 
                        Foreground="White"
                        FontWeight="Bold"

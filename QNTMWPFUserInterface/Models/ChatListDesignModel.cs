@@ -18,37 +18,43 @@ namespace QNTMWPFUserInterface.Models
                 {
                     Initial = "I",
                     Username = "Icey505",
-                    Message = "This is a test msg! It can be made really long and still fit too."
+                    Message = "This is a test msg! It can be made really long and still fit too.",
+                    NewMessage = true
                 },
                 new ChatListItemViewModel
                 {
                     Initial = "X",
                     Username = "xRaptorz",
-                    Message = "Here's an example message"
+                    Message = "Here's an example message",
+                    NewMessage = false
                 },
                 new ChatListItemViewModel
                 {
                     Initial = "G",
                     Username = "GundamArkaus",
-                    Message = "another test message"
+                    Message = "another test message",
+                    NewMessage = true
                 },
                 new ChatListItemViewModel
                 {
                     Initial = "I",
                     Username = "Icey505",
-                    Message = "This is a test msg! It can be made really long and still fit too."
+                    Message = "This is a test msg! It can be made really long and still fit too.",
+                    NewMessage = false
                 },
                 new ChatListItemViewModel
                 {
                     Initial = "X",
                     Username = "xRaptorz",
-                    Message = "Here's an example message"
+                    Message = "Here's an example message",
+                    NewMessage = false
                 },
                 new ChatListItemViewModel
                 {
                     Initial = "G",
                     Username = "GundamArkaus",
-                    Message = "another one"
+                    Message = "another one",
+                    NewMessage = true
                 },
                                 new ChatListItemViewModel
                 {
@@ -66,7 +72,8 @@ namespace QNTMWPFUserInterface.Models
                 {
                     Initial = "G",
                     Username = "GundamArkaus",
-                    Message = "another one"
+                    Message = "another one",
+                    NewMessage = true
                 },
             };
 
