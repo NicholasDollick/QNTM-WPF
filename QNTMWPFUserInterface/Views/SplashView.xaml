@@ -38,12 +38,12 @@
         <StackPanel Grid.Row="2"  Grid.Column="1" Orientation="Vertical" 
                     HorizontalAlignment="Center">
             <Button Margin="0 0 0 0" x:Name="Register" Padding="60 8" 
-                    Background="#FFFF7400" Foreground="White"
+                    Background="{StaticResource IOPageButtonBrush}" Foreground="{StaticResource ButtonTextBrush}"
                     BorderThickness="0">
                 Create Account
             </Button>
             <Button Margin="0 10 0 0" x:Name="Login" Padding="60 8" 
-                    Background="#FFFF7400" Foreground="White"
+                    Background="{StaticResource IOPageButtonBrush}" Foreground="{StaticResource ButtonTextBrush}"
                     BorderThickness="0">
                 Sign In
             </Button>

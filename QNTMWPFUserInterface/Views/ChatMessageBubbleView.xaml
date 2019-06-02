@@ -20,7 +20,8 @@
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
                 <!-- Text Bubble -->
-                <Border CornerRadius="10" Background="Gray" Opacity="1000" Padding="15">
+                <Border CornerRadius="10" Background="{Binding SentByMe,
+                    Converter={helpers:SentByMeToBackgroundConverter}}" Opacity="1000" Padding="15">
                     <!-- Message -->
                     <TextBlock VerticalAlignment="Center"
                            Foreground="White"

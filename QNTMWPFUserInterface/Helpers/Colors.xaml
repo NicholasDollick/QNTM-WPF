@@ -2,4 +2,40 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:QNTMWPFUserInterface">
     
+    <!-- These colors currently assume dark mode -->
+    <Color x:Key="DarkModeBackGround"></Color>
+    
+    <Color x:Key="IOPageButton">#ff7400</Color>
+    <SolidColorBrush x:Key="IOPageButtonBrush" Color="{StaticResource IOPageButton}"/>
+
+    <Color x:Key="ButtonText">#ffffff</Color>
+    <SolidColorBrush x:Key="ButtonTextBrush" Color="{StaticResource ButtonText}"/>
+
+    <Color x:Key="IOPageBackground">#8f8b8b</Color>
+    <SolidColorBrush x:Key="IOPageBGBrush" Color="{StaticResource IOPageBackground}"/>
+
+    <Color x:Key="IOPageTitle">#ffffff</Color>
+    <SolidColorBrush x:Key="IOPageTitleBrush" Color="{StaticResource IOPageTitle}"/>
+
+    <Color x:Key="IOPageText">#000000</Color>
+    <SolidColorBrush x:Key="IOPageTextBrush" Color="{StaticResource IOPageText}"/>
+
+    <Color x:Key="MessageSent">#363636</Color>
+    <SolidColorBrush x:Key="MessageSentBrush" Color="{StaticResource MessageSent}"/>
+
+    <Color x:Key="MessageRecieved">#8f8b8b</Color>
+    <SolidColorBrush x:Key="MessageRecievedBrush" Color="{StaticResource MessageRecieved}"/>
+
+    <Color x:Key="MessageText">#ffffff</Color>
+    <SolidColorBrush x:Key="MessageTextBrush" Color="{StaticResource MessageText}"/>
+
+    <Color x:Key="SideBarItemBG">#0e0d0d</Color>
+    <SolidColorBrush x:Key="SideBarItemBGBrush" Color="{StaticResource SideBarItemBG}"/>
+
+    <Color x:Key="SideBarIconCircle">#282828</Color>
+    <SolidColorBrush x:Key="SideBarIconCircleBrush" Color="{StaticResource SideBarIconCircle}"/>
+
+    <Color x:Key="SideBarSeperator">#2a2424</Color>
+    <SolidColorBrush x:Key="SideBarSeperatorBrush" Color="{StaticResource SideBarSeperator}"/>
+
 </ResourceDictionary>

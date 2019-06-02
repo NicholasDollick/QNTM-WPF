@@ -8,13 +8,17 @@
              Height="60"
              d:DesignHeight="60" d:DesignWidth="300">
     <!-- Single: DataContext="{x:Static local:DesignModel.Instance}" -->
-    <Grid Background="Gray">
+    <!-- this is wrong -->
+    <Grid Background="{StaticResource SideBarItemBGBrush}">
         <Grid.ColumnDefinitions>
             <!-- Icon -->
             <ColumnDefinition Width="auto"/>
             <!-- Content -->
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+
+        <Rectangle HorizontalAlignment="Stretch" Fill="{StaticResource SideBarSeperatorBrush}"
+                   VerticalAlignment="Top" Grid.ColumnSpan="2" Height="1"></Rectangle>
 
         <!-- New Message Indicator -->
         <Border Background="Orange" Width="4"
@@ -24,9 +28,9 @@
                     ConverterParameter=True}"/>
 
         <!-- Icon Padding -->
-        <Border Grid.Column="0" Padding="8">
+        <Border Grid.Column="0" Padding="9">
             <!-- Icon -->
-            <Border Background="Black"
+            <Border Background="{StaticResource SideBarIconCircleBrush}"
                     Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}"
                     CornerRadius="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}">
                 
@@ -35,7 +39,7 @@
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            Foreground="White"
-                           FontSize="30"
+                           FontSize="18"
                            Padding="2"/>
             </Border>
         </Border>
@@ -44,15 +48,15 @@
         <!-- Main Content -->
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
             <TextBlock Text="{Binding Username}" 
-                       Foreground="White"
+                       Foreground="{StaticResource MessageTextBrush}"
                        FontWeight="Bold"
                        />
             <TextBlock Text="{Binding Message}" 
-                       Foreground="White"
+                       Foreground="{StaticResource MessageTextBrush}"
                        TextWrapping="Wrap"
                        FontSize="11"
                        />
         </StackPanel>
-
     </Grid>
+    
 </UserControl>

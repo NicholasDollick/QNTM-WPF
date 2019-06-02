@@ -28,7 +28,8 @@
         </ScrollViewer>
         
         <!-- chatbox area -->
-        <Grid MinHeight="30" MaxHeight="110" Grid.Row="1" Background="Gray">
+        <Grid MinHeight="30" MaxHeight="110" Grid.Row="1" Background="Gray"
+              Margin="0 3 0 0">
             <Grid.ColumnDefinitions>
                 <!-- options(currently unused) -->
                 <ColumnDefinition Width="auto" />

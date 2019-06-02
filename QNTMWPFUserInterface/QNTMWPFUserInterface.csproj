@@ -91,6 +91,7 @@
     <Compile Include="Helpers\InvertedBooleanConverter.cs" />
     <Compile Include="Helpers\PasswordBoxHelper.cs" />
     <Compile Include="Helpers\SentByMeToAllignmentConverter.cs" />
+    <Compile Include="Helpers\SentByMeToBackgroundConverter.cs" />
     <Compile Include="Models\ChatListDesignModel.cs" />
     <Compile Include="Models\SingleChatMessageDesignModel.cs" />
     <Compile Include="Models\ChatMessageDesignModel.cs" />
