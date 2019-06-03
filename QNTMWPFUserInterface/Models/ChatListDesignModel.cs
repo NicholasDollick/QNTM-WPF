@@ -17,61 +17,61 @@ namespace QNTMWPFUserInterface.Models
                 new ChatListItemViewModel
                 {
                     Initial = "I",
-                    Username = "Icey505",
+                    Username = "Username A",
                     Message = "This is a test msg! It can be made really long and still fit too.",
                     NewMessage = true
                 },
                 new ChatListItemViewModel
                 {
                     Initial = "X",
-                    Username = "xRaptorz",
+                    Username = "Username B",
                     Message = "Here's an example message",
                     NewMessage = false
                 },
                 new ChatListItemViewModel
                 {
                     Initial = "G",
-                    Username = "GundamArkaus",
+                    Username = "Username C",
                     Message = "another test message",
                     NewMessage = true
                 },
                 new ChatListItemViewModel
                 {
                     Initial = "I",
-                    Username = "Icey505",
+                    Username = "Username A",
                     Message = "This is a test msg! It can be made really long and still fit too.",
                     NewMessage = false
                 },
                 new ChatListItemViewModel
                 {
                     Initial = "X",
-                    Username = "xRaptorz",
+                    Username = "Username B",
                     Message = "Here's an example message",
                     NewMessage = false
                 },
                 new ChatListItemViewModel
                 {
                     Initial = "G",
-                    Username = "GundamArkaus",
+                    Username = "Username C",
                     Message = "another one",
                     NewMessage = true
                 },
                                 new ChatListItemViewModel
                 {
                     Initial = "I",
-                    Username = "Icey505",
+                    Username = "Username A",
                     Message = "This is a test msg! It can be made really long and still fit too."
                 },
                 new ChatListItemViewModel
                 {
                     Initial = "X",
-                    Username = "xRaptorz",
+                    Username = "Username B",
                     Message = "Here's an example message"
                 },
                 new ChatListItemViewModel
                 {
                     Initial = "G",
-                    Username = "GundamArkaus",
+                    Username = "Username C",
                     Message = "another one",
                     NewMessage = true
                 },

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QNTMWPFUserInterface.ViewModels
 {
-    class SideMenuControlViewModel : Screen
+    public class SideMenuControlViewModel : Screen
     {
     }
 }
