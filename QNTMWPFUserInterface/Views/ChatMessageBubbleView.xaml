@@ -9,7 +9,7 @@
              mc:Ignorable="d" d:DesignWidth="300">
     <!-- This assumes dark mode for now -->
     <!--DataContext="{x:Static model:SingleChatMessageDesignModel.Instance}"-->
-    <Border Padding="5px">
+    <Border Padding="5px" >
         <Grid>
             <!-- Message Container -->
             <Grid Margin="10 15 0 0"
@@ -21,20 +21,15 @@
                 </Grid.RowDefinitions>
                 <!-- Text Bubble -->
                 <Border CornerRadius="10" Background="{Binding SentByMe,
-                    Converter={helpers:SentByMeToBackgroundConverter}}" Opacity="1000" Padding="15">
+                    Converter={helpers:SentByMeToBackgroundConverter}}" Padding="15">
                     <!-- Message -->
                     <TextBlock VerticalAlignment="Center"
-                           Foreground="White"
+                           Foreground="{StaticResource MessageTextBrush}"
                            TextWrapping="Wrap"
                            Text="{Binding Message}"
                            />
                 </Border>
-    <!--
-                <Path Grid.Row="1" Margin="15 0 15 0"
-                      Data="M 0,0 L 15,15 L 30,0 L 0,0"
-                      Fill="Gray"
-                      />
-     -->
+
             </Grid>
             <!-- Profile icon thingy -->
             <Border VerticalAlignment="Top"
@@ -42,17 +37,17 @@
                     Visibility="{Binding SentByMe, Converter={helpers:InvertedBooleanConverter}, ConverterParameter=true}"
                     CornerRadius="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}"
                     Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}"
-                    Background="DarkCyan"
+                    Background="{StaticResource SideBarIconCircleBrush}"
                     BorderThickness="2"
-                    BorderBrush="White"
+                    BorderBrush="Transparent"
                     >
                 <!-- Text will be bound to first letter of username -->
                 <TextBlock Text="{Binding Initial}"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
-                           Foreground="White"
+                           Foreground="{StaticResource MessageTextBrush}"
                            FontSize="18"
-                           Margin="0 0 1 0"
+                           Margin="2 1 1 2"
                            />
             </Border>
         </Grid>

@@ -48,18 +48,22 @@
                      AcceptsReturn="True"
                      AcceptsTab="True"
                      VerticalAlignment="Center"
-                     Background="Gray"
+                     Background="Transparent"
                      />
 
             <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="0 0 8 0">
                 <!-- unicode emoji -->
                 <Button Height="{Binding Height, RelativeSource={RelativeSource AncestorType=Grid}}"
-                        Content="   :)   "/>
+                        Content="   :)   "
+                        Foreground="{StaticResource ButtonTextBrush}"
+                        Background="{StaticResource IOPageButtonBrush}"/>
 
                 <!-- send button -->
                 <Button Content="Send"
                         Padding="6"
                         FontSize="12"
+                        Foreground="{StaticResource ButtonTextBrush}"
+                        Background="{StaticResource IOPageButtonBrush}"
                         />
             </StackPanel>
 

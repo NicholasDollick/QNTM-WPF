@@ -38,4 +38,10 @@
     <Color x:Key="SideBarSeperator">#2a2424</Color>
     <SolidColorBrush x:Key="SideBarSeperatorBrush" Color="{StaticResource SideBarSeperator}"/>
 
+    <Color x:Key="MessageIconCircle">#0575e6</Color>
+    <SolidColorBrush x:Key="MessageIconCircleBrush" Color="{StaticResource MessageIconCircle}"/>
+
+    <Color x:Key="MessageIconStroke">#ffffff</Color>
+    <SolidColorBrush x:Key="MessageIconStrokeBrush" Color="{StaticResource MessageIconStroke}"/>
+
 </ResourceDictionary>

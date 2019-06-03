@@ -14,9 +14,9 @@ namespace QNTMWPFUserInterface.Models
         public SingleChatMessageDesignModel()
         {
             SenderUsername = "Dylan";
-            Message = "This is a test";
+            Message = "This is a test with a slightlt longer message";
             Initial = "D";
-            SentByMe = true;  
+            SentByMe = false;  
         }
         #endregion
     }
