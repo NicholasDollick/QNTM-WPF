@@ -3,8 +3,9 @@
                     xmlns:local="clr-namespace:QNTMWPFUserInterface">
     
     <!-- These colors currently assume dark mode -->
-    <Color x:Key="DarkModeBackGround"></Color>
-    
+    <Color x:Key="DarkModeBackGround">#000000</Color>
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource DarkModeBackGround}"/>
+
     <Color x:Key="IOPageButton">#ff7400</Color>
     <SolidColorBrush x:Key="IOPageButtonBrush" Color="{StaticResource IOPageButton}"/>
 

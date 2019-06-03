@@ -19,7 +19,7 @@
                     </Grid.RowDefinitions>
 
                     <!-- Top Menu -->
-                    <Grid Background="Black">
+                    <Grid Background="{StaticResource BackgroundBrush}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="auto"/>
                             <ColumnDefinition Width="*"/>
@@ -31,7 +31,7 @@
                                     HorizontalAlignment="Left"
                                     CornerRadius="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}"
                                     Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}"
-                                    Background="DarkCyan"
+                                    Background="{StaticResource MessageIconCircleBrush}"
                                     BorderThickness="2"
                                     BorderBrush="White"
                                     Margin="5 5 0 5"
@@ -40,10 +40,10 @@
                                 <TextBlock Text="U"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
-                                    Foreground="White"
+                                    Foreground="{StaticResource MessageTextBrush}"
                                     FontSize="18"/>
                             </Border>
-                            <TextBlock Foreground="White" HorizontalAlignment="Center" 
+                            <TextBlock Foreground="{StaticResource MessageTextBrush}" HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" Margin="10 5 20 5">
                                 Username
                             </TextBlock>
